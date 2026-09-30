@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PataFeliz | Acessórios para cães</title>
+  <meta name="description" content="Comedouros lentos, tapetes de focinho e peitorais para cães. Enviado a partir da Europa.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="topbar">Envio a partir da Europa · Devolução em 14 dias</div>
+
+  <header class="header">
+    <a class="logo" href="#">🐾 PataFeliz</a>
+    <nav>
+      <a href="#produtos">Produtos</a>
+      <a href="#pack">Pack</a>
+      <a href="#faq">Perguntas</a>
+    </nav>
+    <button class="cart-btn" id="cartBtn" aria-label="Abrir carrinho">Carrinho (<span id="cartCount">0</span>)</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Refeições mais calmas. Passeios mais seguros.</h1>
+        <p>Acessórios pensados para o dia a dia do teu cão: comer devagar, brincar com a cabeça e passear com conforto.</p>
+        <a class="btn" href="#produtos">Ver produtos</a>
+      </div>
+      <div class="hero-art" aria-hidden="true">🐶</div>
+    </section>
+
+    <section class="benefits">
+      <div><strong>🚚 Envio da Europa</strong><span>Prazo indicado em cada produto</span></div>
+      <div><strong>↩️ 14 dias</strong><span>Para devolveres sem complicações</span></div>
+      <div><strong>💬 Apoio em português</strong><span>Respondemos por email</span></div>
+    </section>
+
+    <section id="produtos" class="section">
+      <h2>Os nossos produtos</h2>
+      <div class="grid" id="productGrid"></div>
+    </section>
+
+    <section id="pack" class="section pack">
+      <h2>Pack Refeição Tranquila</h2>
+      <p>Comedouro lento + tapete de focinho. Ideal para cães que comem depressa ou precisam de gastar energia.</p>
+      <p class="pack-price"><span id="packOld"></span> <strong id="packPrice"></strong></p>
+      <button class="btn" id="packBtn">Adicionar pack ao carrinho</button>
+    </section>
+
+    <section id="faq" class="section">
+      <h2>Perguntas frequentes</h2>
+      <details><summary>Quanto tempo demora a entrega?</summary><p>O prazo aparece em cada produto e depende do armazém do fornecedor. Recebes o código de seguimento por email assim que a encomenda for expedida.</p></details>
+      <details><summary>Posso devolver?</summary><p>Sim. Tens 14 dias após a receção para desistir da compra. Vê os detalhes na <a href="politicas.html#devolucoes">política de devoluções</a>.</p></details>
+      <details><summary>Como escolho o tamanho do peitoral?</summary><p>Mede o perímetro do peito do teu cão, no ponto mais largo, e compara com a tabela de tamanhos na página do produto.</p></details>
+      <details><summary>Estes produtos substituem o veterinário?</summary><p>Não. São acessórios de conforto e rotina. Se o teu cão tem problemas de saúde ou de comportamento, fala com o veterinário.</p></details>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div>
+      <strong>🐾 PataFeliz</strong>
+      <p>Acessórios para cães.</p>
+    </div>
+    <div>
+      <a href="politicas.html#envios">Envios</a>
+      <a href="politicas.html#devolucoes">Devoluções</a>
+      <a href="politicas.html#privacidade">Privacidade</a>
+      <a href="politicas.html#termos">Termos</a>
+    </div>
+    <small>© <span id="year"></span> PataFeliz. Todos os direitos reservados.</small>
+  </footer>
+
+  <aside class="drawer" id="drawer" aria-hidden="true">
+    <div class="drawer-head"><h3>O teu carrinho</h3><button id="closeCart" aria-label="Fechar">✕</button></div>
+    <div id="cartItems"></div>
+    <div class="drawer-foot">
+      <p>Total: <strong id="cartTotal">0,00 €</strong></p>
+      <button class="btn" id="checkoutBtn">Finalizar compra</button>
+      <small id="checkoutNote"></small>
+    </div>
+  </aside>
+  <div class="overlay" id="overlay"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
