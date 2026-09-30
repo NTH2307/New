@@ -1,0 +1,9 @@
+Handle,Title,Body (HTML),Vendor,Type,Tags,Published,Option1 Name,Option1 Value,Variant SKU,Variant Inventory Tracker,Variant Inventory Policy,Variant Fulfillment Service,Variant Price,Variant Requires Shipping,Variant Taxable,Status
+comedouro-lento-anti-engasgo,Comedouro lento anti-engasgo,"<p>Relevos no fundo que obrigam o cão a comer mais devagar.</p><ul><li>Ideal para cães que comem depressa</li><li>Fácil de lavar</li></ul><p>Acessório de conforto e rotina. Não substitui aconselhamento veterinário.</p>",PataFeliz,Comedouros,"cão,comedouro,refeição",TRUE,Tamanho,Pequeno,CLENTO-P,,deny,manual,21.90,TRUE,TRUE,draft
+comedouro-lento-anti-engasgo,,,,,,,,Médio,CLENTO-M,,deny,manual,21.90,TRUE,TRUE,
+comedouro-lento-anti-engasgo,,,,,,,,Grande,CLENTO-G,,deny,manual,21.90,TRUE,TRUE,
+tapete-de-focinho,Tapete de focinho (snuffle mat),"<p>Esconde petiscos entre as tiras e deixa o cão cheirar e procurar.</p><ul><li>Estimula o olfato e a concentração</li><li>Lavável</li></ul>",PataFeliz,Enriquecimento,"cão,brinquedo,olfato",TRUE,Title,Default Title,TFOCINHO,,deny,manual,16.90,TRUE,TRUE,draft
+peitoral-ajustavel-anti-puxao,Peitoral ajustável anti-puxão,"<p>Distribui a pressão pelo peito e tem faixas refletoras para passeios ao fim do dia.</p><p>Mede o perímetro do peito do teu cão no ponto mais largo e compara com a tabela de tamanhos.</p>",PataFeliz,Passeio,"cão,peitoral,passeio",TRUE,Tamanho,S,PEIT-S,,deny,manual,24.90,TRUE,TRUE,draft
+peitoral-ajustavel-anti-puxao,,,,,,,,M,PEIT-M,,deny,manual,24.90,TRUE,TRUE,
+peitoral-ajustavel-anti-puxao,,,,,,,,L,PEIT-L,,deny,manual,24.90,TRUE,TRUE,
+peitoral-ajustavel-anti-puxao,,,,,,,,XL,PEIT-XL,,deny,manual,24.90,TRUE,TRUE,

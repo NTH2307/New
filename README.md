@@ -8,6 +8,11 @@ python3 -m http.server 8000
 ```
 Abrir http://localhost:8000
 
+## Shopify
+`shopify-produtos.csv` está pronto para importar (Produtos → Importar). Todos os produtos ficam em
+`draft`. Preços provisórios; trocar pelos reais depois de ver os custos no fornecedor e acrescentar
+`Image Src` com as fotos do fornecedor/amostras.
+
 ## Por fazer antes de abrir
 - [ ] Confirmar preços e prazos reais com o fornecedor (Spocket/BigBuy) e ajustar `PRODUCTS` em `app.js`
 - [ ] Pedir amostras dos 3 produtos
