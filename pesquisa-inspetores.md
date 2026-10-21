@@ -58,3 +58,40 @@ Data: 2026-10-21. Fontes: excertos de pesquisa web (Reddit, fórum InterNACHI, s
 - Falta de conhecimento do setor: precisamos de pelo menos um inspetor como conselheiro.
 - Os relatórios têm normas e responsabilidade legal (InterNACHI, estados).
 - Spectora é forte e pode baixar preços ou copiar o que fizermos.
+
+---
+
+# Atualização: o plano mudou
+
+## A. Preço fixo e IA já estão ocupados (segundo a segunda ronda de pesquisa)
+- InspectorData: 79 $/mês, relatórios ilimitados, sem taxa por relatório nem escalões.
+- Expert Check e InspectPro: preço fixo mensal e IA (fotos, narrativas automáticas).
+- ISN: plano ilimitado a 99 $/mês, ou 7,25 $ por inspeção. HomeGauge e InspectorPrime: pagamento único.
+- Não verifiquei estes concorrentes diretamente. Reddit e Facebook não foram acessíveis, e é onde estão as queixas mais sinceras.
+
+Conclusão: "mais barato com IA" não faz ninguém mudar. Mudar custa tempo (modelos, histórico, hábitos).
+
+## B. Nichos de relatório avaliados
+
+| Nicho | O que encontrei | Veredito |
+|---|---|---|
+| Florida 4-Point e wind mitigation | Já existe uma app dedicada (QuickFill) e vários concorrentes gerais têm modelos (Palmtech, Home Inspector Pro, Inspector Toolbelt, SwiftReporter). No fórum InterNACHI há inspetores a perguntar se usam o software geral ou um gerador de PDF à parte. | Concorrência média. Há um sinal fraco de desconforto com as soluções atuais. |
+| Texas TREC REI 7-6 | Formato único obrigatório desde fev. 2022. Spectora, EZ Home Inspection e Spectacular já têm o modelo, e há biblioteca gratuita. | Comoditizado. Evitar. |
+| Telhados e seguros | EagleView, Hover (cerca de 1 000 $/ano), DroneDeploy (mais de 4 000 $/ano), SkyeBrowse e ferramentas de relatório com IA. | Muito concorrido e exige tecnologia pesada (drones, 3D). Evitar. |
+
+Nenhum é espaço vazio. O mais plausível é a Florida (4-Point e wind mitigation), mas ainda sem prova de uma dor forte.
+
+## C. Perguntas novas (substituem a secção 7)
+1. Se tivesse de trocar de software amanhã, o que o faria mudar?
+2. E o que o faria ficar onde está?
+3. Quanto tempo gasta num relatório e em que parte? (fotos, escrever, rever, enviar)
+4. Que parte do trabalho faz hoje à mão que o software devia fazer?
+5. Já tentou mudar? O que correu mal ou o travou?
+6. Quanto paga hoje no total, com extras?
+
+## D. Mensagem (em inglês)
+
+> Hi [name], I'm researching how home inspectors handle their reports. I'm not selling anything. If you had to switch report software tomorrow, what would make you switch, and what would make you stay? Also, roughly how long does a typical report take you and which part takes longest? A short reply is plenty. Thanks!
+
+## E. Regra de decisão (para não perder meses)
+Falar com 5 inspetores. Se nenhum descrever uma razão forte para mudar de software, **abandonar a ideia dos inspetores** e passar à seguinte. Uma razão forte é algo concreto e repetido, não "seria bom se fosse mais barato".
