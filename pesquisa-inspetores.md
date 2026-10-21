@@ -91,7 +91,24 @@ Nenhum é espaço vazio. O mais plausível é a Florida (4-Point e wind mitigati
 
 ## D. Mensagem (em inglês)
 
-> Hi [name], I'm researching how home inspectors handle their reports. I'm not selling anything. If you had to switch report software tomorrow, what would make you switch, and what would make you stay? Also, roughly how long does a typical report take you and which part takes longest? A short reply is plenty. Thanks!
+> Hi [name], I'm not a home inspector and I'm not selling anything. I'm studying how inspectors deal with their report software before deciding whether to build something. If you had to switch software tomorrow, what would make you switch, and what would make you stay? Also, roughly how long does a typical report take and which part takes longest? A short reply is plenty. Thanks!
 
-## E. Regra de decisão (para não perder meses)
-Falar com 5 inspetores. Se nenhum descrever uma razão forte para mudar de software, **abandonar a ideia dos inspetores** e passar à seguinte. Uma razão forte é algo concreto e repetido, não "seria bom se fosse mais barato".
+## E. Regra de decisão (fixada ANTES de enviar qualquer mensagem)
+- **Meta de envio:** 20 a 30 mensagens para conseguir ~5 conversas (contacto frio tem pouca resposta; pode demorar dias).
+- **Avançar** só se pelo menos **2 dos 5** disserem que mudariam por uma razão concreta **e** que pagariam por ela.
+- **0 ou 1 de 5:** parar e escolher a próxima ideia. Não se muda o critério depois de ver as respostas.
+- Se ao fim de 3 semanas houver menos de 5 conversas, repetir o envio uma vez. Se mesmo assim não houver, parar.
+
+## F. Plano B (decidir com calma, não por exclusão)
+O recepcionista de IA **não** é o plano B por defeito (é serviço, em Portugal, com vendas diretas). Opções a avaliar se os inspetores falharem:
+1. Um nicho dentro dos inspetores.
+2. Conciliação de contas para contabilistas (B2B, internacional, sem vídeos). **Ainda não pesquisei.**
+
+## G. Onde procurar inspetores (lista de sítios, não de pessoas)
+Não consegui abrir Reddit nem Facebook, por isso isto é onde procurar. A seleção e o envio são teus.
+- Reddit: r/homeinspectors e r/HomeInspections. Ler as regras antes. Um post público de pesquisa pode render mais do que mensagens privadas, mas pode ser removido pelos moderadores.
+- Fórum InterNACHI (forum.nachi.org): secção geral de inspetores.
+- Grupos de Facebook de inspetores (por estado, ex.: Florida). Pedir para entrar e ler as regras.
+- Sites das próprias empresas de inspeção: a maioria tem email ou formulário de contacto público. Pesquisar "home inspector [cidade]" no Google Maps.
+- LinkedIn: pesquisar "home inspector".
+- Começar por inspetores independentes (1 a 3 pessoas), que decidem sozinhos qual o software.
