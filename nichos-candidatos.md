@@ -35,3 +35,23 @@ Escolher 2 a 3 segmentos concretos dentro de subsídios (e comparar com concurso
 
 ## Portão
 Se nenhum segmento mostrar uma lacuna clara, paramos aqui em vez de construir.
+
+---
+
+# Fase 0b: segmentos dentro de subsídios e concursos (2026-10-26)
+
+| Segmento | O que encontrei | Lacuna clara? |
+|---|---|---|
+| **A. Subsídios da UE para PME e startups** | O portal oficial da Comissão é grátis. Há muitas alternativas: FundingBox, EUcalls, Cogrant (consultores com IA), GrantBite, Cuttles (1 357 subsídios em 39 países), EU Funding Portal, Cascade Funding Hub. Muito conteúdo grátis. | **Não.** Quase tudo é grátis ou serve de isco para consultoria. |
+| **B. Subsídios do Reino Unido para PME** | O GOV.UK tem pesquisa grátis ("Find a grant", 166 esquemas). A Swoop Funding (500+ subsídios) vive de intermediação de financiamento. | **Não.** O gratuito domina. |
+| **C. Subsídios setoriais (agricultura, energia solar/limpa)** | Fragmentado por país: RVO (Países Baixos), GOV.UK, bases de dados de organizações (CEBN), ferramentas grátis (Cleantech for Europe). Não vi nenhuma ferramenta paga unificada. | **Possível, não provada.** Falta saber se alguém paga (por exemplo, instaladores que usam subsídios para vender). |
+| **D. Concursos públicos da UE para PME** | O TED é grátis mas só cobre contratos acima do limiar (143 000 € em bens/serviços do Estado central; 5,5 M€ em obras). Mercell, Tendium, DTAD, Duke, TED Monitor, Hermix e Tendify competem; os preços vão do grátis a mais de 20 000 €/ano. | **Parcial.** Os concursos abaixo do limiar estão espalhados por portais nacionais e é onde as PME concorrem. Mas há muitos entrantes novos. |
+| **E. Financiamento de cultura (cinema, artistas)** | Portal oficial grátis, GetGrant, EuroAccess. Não encontrei bases pagas. | **Não.** Pouca disposição para pagar. |
+
+## Veredicto contra o portão
+Portão fixado: *"se nenhum segmento mostrar uma lacuna clara, paramos em vez de construir."*
+Resultado: **nenhum segmento passa.** C e D são as pistas menos más, mas sem prova de que alguém pague.
+
+## O que a pesquisa mostra no geral
+- Dados públicos sobre subsídios são, na Europa, muito mais grátis do que nos EUA, e quem os agrega vive de consultoria e intermediação, não de subscrições.
+- O caso do AngelMatch (que inspirou o plano) nasceu de uma dor pessoal do fundador, que precisava dos dados. Isso é difícil de replicar por análise de mesa.
