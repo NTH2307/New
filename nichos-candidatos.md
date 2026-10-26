@@ -1,10 +1,10 @@
 # Fase 0: 5 nichos candidatos (base de dados paga)
 
-Data: 2026-10-26. Fontes: excertos de pesquisa web (sites de comparação, páginas dos próprios produtos). Preços e números vêm sobretudo das próprias empresas ou de sites de comparação, por isso são ordem de grandeza e não estão verificados.
+Data: 2026-10-26. Fontes: excertos de pesquisa web (sites de comparação, páginas dos próprios produtos). Preços e números vêm sobretudo das próprias empresas ou de sites de comparação, por isso são ordem de grandeza e não estão verificados. Os preços originais estão em dólares; aqui aparecem convertidos para euros de forma aproximada (1 $ ≈ 0,9 €).
 
 ## Critérios (do plano)
 1. Quem compra ganha dinheiro com os dados.
-2. Já existe concorrente a cobrar 30 $/mês ou mais, mas fraco/caro/desatualizado.
+2. Já existe concorrente a cobrar cerca de 30 €/mês ou mais, mas fraco/caro/desatualizado.
 3. Dados públicos mas espalhados.
 4. Sem dados pessoais (organizações, não pessoas).
 5. Dá para ter 300 a 500 entradas boas antes de lançar.
@@ -13,15 +13,15 @@ Data: 2026-10-26. Fontes: excertos de pesquisa web (sites de comparação, pági
 
 | # | Nicho | Preços encontrados | Concorrência | Dados pessoais? | Veredito |
 |---|---|---|---|---|---|
-| 1 | **Subsídios e financiamentos** (pequenas empresas, startups) | GrantWatch 249 $/ano (ou 49 $/mês); GrantStation 199 $/ano; Grant Gopher 174 $/ano; Grant Frog 99–399 $/mês; Instrumentl 299–999 $/mês; Candid 1 199 $/ano | Muita, mas com escala de preços larga. Foco nos EUA e em ONGs. | Não (programas e financiadores) | **Melhor candidato** |
-| 2 | **Concursos públicos** (pequenas empresas) | Jorpex 49–149 $/mês; GovPurchase; Deltek GovWin (empresas grandes) | Vários. Os dados oficiais (SAM.gov) são grátis. | Não | **Segundo**. Barreira baixa, o valor está só em juntar e filtrar. |
-| 3 | **Fornecedores e grossistas** (vendedores online) | SaleHoo 9 $/mês anual ou 299 $ vitalício; Worldwide Brands 119 $/ano ou 197 $ vitalício | 2 grandes, ambos com queixas (informação desatualizada, resultados irrelevantes). | Não | Preço baixo e clientes iniciantes. Receita por cliente fraca. |
+| 1 | **Subsídios e financiamentos** (pequenas empresas, startups) | GrantWatch ≈ 225 €/ano (ou ≈ 44 €/mês); GrantStation ≈ 180 €/ano; Grant Gopher ≈ 157 €/ano; Grant Frog ≈ 90–360 €/mês; Instrumentl ≈ 270–900 €/mês; Candid ≈ 1 080 €/ano | Muita, mas com escala de preços larga. Foco nos EUA e em ONGs. | Não (programas e financiadores) | **Melhor candidato** |
+| 2 | **Concursos públicos** (pequenas empresas) | Jorpex ≈ 44–134 €/mês; GovPurchase; Deltek GovWin (empresas grandes) | Vários. Os dados oficiais (SAM.gov) são grátis. | Não | **Segundo**. Barreira baixa, o valor está só em juntar e filtrar. |
+| 3 | **Fornecedores e grossistas** (vendedores online) | SaleHoo ≈ 8 €/mês (anual) ou ≈ 270 € vitalício; Worldwide Brands ≈ 107 €/ano ou ≈ 177 € vitalício | 2 grandes, ambos com queixas (informação desatualizada, resultados irrelevantes). | Não | Preço baixo e clientes iniciantes. Receita por cliente fraca. |
 | 4 | **Feiras e conferências** | ExpoLeads (listas de contactos de eventos); diretórios gratuitos | Dados valiosos exigem contactos de pessoas. | Sim | Falha o critério 4. |
-| 5 | **Podcasts** (PR e convidados) | Rephonic 99 $/mês; Podchaser Pro ~2 500 $/ano; PodMatch 32 $/mês; Podseeker 99 $/mês | Forte, com bases enormes (milhões de podcasts). | Sim (contactos de anfitriões) | Falha o critério 4 e está ocupado. |
+| 5 | **Podcasts** (PR e convidados) | Rephonic ≈ 89 €/mês; Podchaser Pro ≈ 2 250 €/ano; PodMatch ≈ 29 €/mês; Podseeker ≈ 89 €/mês | Forte, com bases enormes (milhões de podcasts). | Sim (contactos de anfitriões) | Falha o critério 4 e está ocupado. |
 
 ## Porque subsídios é o primeiro
 - Quem compra tem retorno direto: um subsídio vale milhares.
-- Os clientes já pagam de 174 $/ano a mais de 3 500 $/ano, por isso há mercado em vários níveis de preço.
+- Os clientes já pagam de cerca de 157 €/ano a mais de 3 150 €/ano, por isso há mercado em vários níveis de preço.
 - Os dados são públicos (programas, prazos, requisitos) mas estão espalhados por muitos portais.
 - Sem dados pessoais.
 

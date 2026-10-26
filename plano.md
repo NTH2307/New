@@ -6,7 +6,7 @@ Data: 2026-10-25. Estado: proposta, à espera de decisão do Zé.
 Um site com uma **base de dados de nicho que as pessoas pagam para usar** (subscrição mensal), encontrado através do Google, sem vídeos e sem mensagens a desconhecidos. Eu construo e escrevo; tu supervisionas.
 
 ## Porque este modelo (e não os outros que vimos)
-- Prova de que funciona: o AngelMatch (base de dados de 125 000 investidores) chegou a ~29 000 $ de receita mensal com 360 subscritores (~80 $ cada), segundo o próprio fundador. Subiu de 3 000 para 20 000 $ em 6 a 8 meses com SEO e ferramentas gratuitas. **Números auto-relatados, não verificados.**
+- Prova de que funciona: o AngelMatch (base de dados de 125 000 investidores) chegou a ≈ 26 000 € de receita mensal com 360 subscritores (≈ 72 € cada), segundo o próprio fundador. Subiu de ≈ 2 700 para ≈ 18 000 € em 6 a 8 meses com SEO e ferramentas gratuitas. **Números auto-relatados, não verificados.**
 - Não precisa de programar: é um site com pesquisa, filtros e área paga. Eu faço-o.
 - Não precisa de vídeos nem de vender a pessoas: os clientes chegam por pesquisa.
 - Mercado internacional, em inglês.
@@ -17,7 +17,7 @@ Um site com uma **base de dados de nicho que as pessoas pagam para usar** (subsc
 
 ## Critérios para escolher o nicho
 1. Quem compra **ganha dinheiro com os dados** (vendedores, investidores, agências, importadores), por isso paga sem custo emocional.
-2. Já existe pelo menos **1 concorrente que cobra 30 $/mês ou mais** (prova de que pagam), mas é caro, desatualizado ou fraco.
+2. Já existe pelo menos **1 concorrente que cobra cerca de 30 €/mês ou mais** (prova de que pagam), mas é caro, desatualizado ou fraco.
 3. Os dados são **públicos mas espalhados** (juntá-los e limpá-los é o valor).
 4. **Sem dados pessoais** (empresas e organizações, não emails de pessoas). Evita problemas de RGPD.
 5. Dá para ter **300 a 500 entradas boas** antes de lançar.
