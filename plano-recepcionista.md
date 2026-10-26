@@ -45,8 +45,10 @@ Começa no Porto, num setor, à mão (serviço). Só depois vira produto repetí
 - **Portão 1 (dia 7):** a voz soa aceitável a 5 pessoas (nota média ≥ 4 em 5) e o agente completa bem pelo menos 8 de 10 chamadas de teste. Se não, mudamos para um assistente só de WhatsApp/SMS ou paramos.
 
 ### Fase 2: contactar (dias 8 a 30)
-- Enviar 40 mensagens (WhatsApp/SMS), usando o resultado do teste das chamadas.
-- Meta realista: 8 respostas, 4 demonstrações, **2 pilotos gratuitos de 14 dias**.
+**Correção importante (regras de contacto):** a Lei 41/2004, art. 13.º-A, exige **consentimento prévio** para enviar marketing direto não solicitado por SMS, correio eletrónico e aplicações semelhantes (como o WhatsApp) quando o destinatário é **pessoa singular**. Muitos canalizadores trabalham como empresário em nome individual, por isso **não mandamos mensagens frias a esses**. Para **pessoas coletivas** (Lda, SA) é permitido até recusarem, mas é obrigatório consultar antes a **lista da Direção-Geral do Consumidor** (atualizada mensalmente) e dar sempre maneira de recusar. Não sou advogado: confirma com um profissional.
+- **Primeiro contacto: uma chamada feita por ti** (pessoa a falar com pessoa), ou uma visita, ou o formulário de contacto do site da empresa. Se pedirem para não voltar a contactar, respeitas.
+- Só depois de haver conversa e acordo é que se manda mensagem.
+- Meta realista: 40 contactos, 8 conversas, 4 demonstrações, **2 pilotos gratuitos de 14 dias**.
 - **Portão 2 (dia 30):** pelo menos 2 pilotos a funcionar. Se 0, repetimos o envio uma vez; se continuar a 0, paramos.
 
 ### Fase 3: cobrar (dias 31 a 90)
