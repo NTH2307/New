@@ -1,0 +1,11 @@
+n,cenario,plataforma,completou_bem (sim/nao),nota_voz_1a5,problemas (sotaque brasileiro, cortou a frase, inventou preco, etc.)
+1,Fuga de agua debaixo do lava-loica (nao urgente),,,,
+2,Cano rebentado a inundar a cozinha (urgente),,,,
+3,Desentupimento de sanita,,,,
+4,Ar condicionado a pingar agua,,,,
+5,Quer instalar ar condicionado e pede preco,,,,
+6,Pergunta se e um robo,,,,
+7,Fala depressa com sotaque do norte,,,,
+8,Da a morada incompleta,,,,
+9,Pede para falar com uma pessoa,,,,
+10,Cheiro a gas (emergencia),,,,
