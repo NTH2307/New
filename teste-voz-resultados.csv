@@ -1,13 +1,14 @@
 n,cenario,plataforma,completou_bem (sim/nao),nota_voz_1a5,problemas
-1,Fuga de agua debaixo do lava-loica (nao urgente),ElevenLabs (Marta),sim,3 (a confirmar),saudacao repetida (corrigido); chamada nao terminava (ferramenta encerrar ligada)
-2,Cano rebentado a inundar a cozinha (urgente),ElevenLabs (Marta),sim,3 (a confirmar),muitas perguntas (corrigido com fluxo urgente: agora 4 respostas)
-3,Desentupimento de sanita,ElevenLabs (Marta),sim,3 (a confirmar),
-4,Ar condicionado a pingar agua,,,,por testar
-5,Quer saber o preco,ElevenLabs (Marta),sim,3 (a confirmar),recusou duas vezes e voltou a confirmar
-6,Pergunta se e um robo,ElevenLabs (Marta),sim,3 (a confirmar),respondeu que e assistente virtual (IA)
-7,Fala depressa com sotaque do norte,,,,por testar
-8,Da a morada incompleta,,,,por testar (nome de rua raro mal ouvido: Espinal/Espano)
-9,Pede para falar com uma pessoa,,,,por testar
-10,Cheiro a gas (emergencia),,,,por testar
+1,Fuga de agua debaixo do lava-loica (nao urgente),ElevenLabs (Marta),sim,por confirmar,corrigidos: saudacao repetida; encerrar chamada
+2,Cano rebentado a inundar a cozinha (urgente),ElevenLabs (Marta),sim,por confirmar,fluxo urgente: ~3-4 respostas do cliente
+3,Desentupimento de sanita,ElevenLabs (Marta),sim,por confirmar,
+4,Ar condicionado a pingar agua (fora do ambito),ElevenLabs (Marta),sim,por confirmar,regra de recusa de telemovel adicionada
+5,Quer saber o preco,ElevenLabs (Marta),sim,por confirmar,recusa dar preco
+6,Pergunta se e um robo,ElevenLabs (Marta),sim,por confirmar,diz que e assistente virtual (IA)
+7,Fala depressa,ElevenLabs (Marta),sim,por confirmar,telemovel ouvido bem; nomes de rua raros mal ouvidos
+8,Da a morada incompleta,ElevenLabs (Marta),sim,por confirmar,agora pergunta a localidade
+9,Pede para falar com uma pessoa,ElevenLabs (Marta),sim,por confirmar,diz que o tecnico liga de volta
+10,Cheiro a gas (emergencia),ElevenLabs (Marta),sim,por confirmar,aviso de seguranca correto
 
-Notas: voz soa a Portugal, tom constante (modo expressivo desligado). Reconhecimento de fala falha por vezes (ex: Boa tarde -> Lota; agora -> Agosto; digito nove -> um); regras de validacao do telemovel adicionadas. Nota da voz ainda por confirmar com 5 pessoas. Portao 1: >=8 de 10 e nota media >=4.
+Estado do Portao 1: parte 1 (>=8 de 10 cenarios) CUMPRIDA (10 de 10). Parte 2 (nota media da voz >=4, dada por 5 pessoas, e maioria a dizer que soa a Portugal e que percebeu tudo) POR FAZER.
+Notas: voz soa a Portugal, tom constante (modo expressivo desligado); o utilizador descreve-a como "mais ou menos natural". 18 palavras-chave adicionadas ao reconhecimento de fala. Pendente: confirmar telemovel no fluxo urgente com pergunta curta; validacao de 9 digitos fica para depois (verificacao automatica).
