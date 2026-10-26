@@ -1,5 +1,7 @@
 # Pesquisa: software de inspeção de imóveis (EUA)
 
+> Valores convertidos de dólares para euros de forma aproximada (1 $ ≈ 0,9 €).
+
 Data: 2026-10-21. Fontes: excertos de pesquisa web (Reddit, fórum InterNACHI, sites de comparação).
 **Aviso:** vi só excertos e títulos, não li as discussões completas. Os sites de comparação (Verispec, PoolVerify, QuoteIQ, SwiftReporter) vendem produtos concorrentes, por isso são enviesados. Os números servem de ordem de grandeza.
 
@@ -7,15 +9,15 @@ Data: 2026-10-21. Fontes: excertos de pesquisa web (Reddit, fórum InterNACHI, s
 
 | Queixa | O que apareceu |
 |---|---|
-| Preço alto | Base de 109 $/mês por inspetor (um site concorrente diz 149 $). Há threads como "I think I'm Done Using Spectora" (o custo é alto) e "Cheaper software than Spectora". |
-| Extras que somam | Inspetor adicional: ~99 $/mês. Versão "Advanced": 4 $ por inspeção publicada. Site próprio: 699 $/ano + 499 $ de instalação. Taxas de processamento de pagamentos. |
+| Preço alto | Base de ≈ 98 €/mês por inspetor (um site concorrente diz ≈ 134 €). Há threads como "I think I'm Done Using Spectora" (o custo é alto) e "Cheaper software than Spectora". |
+| Extras que somam | Inspetor adicional: ~≈ 89 €/mês. Versão "Advanced": ≈ 3,6 € por inspeção publicada. Site próprio: ≈ 629 €/ano + ≈ 449 € de instalação. Taxas de processamento de pagamentos. |
 | Confiança nos dados | Thread "Spectora: Opt Out of Fixle or Cancel Subscription": inspetores queixam-se de que o Spectora ligou os relatórios a seguradoras e garantias (Fixle) sem os consultar ("going behind our backs"). |
 | Subscrição como despesa fixa | No fórum InterNACHI, alguém diz que software de relatórios "é simples demais para ser uma despesa constante" e procura software sem subscrição. |
 
 ## 2. Preços de outros concorrentes
 
-- Spectora 109 $/mês; HomeGauge 89 $; Home Inspector Pro 74–89 $; Inspector Toolbelt 79 $; Palmtech 50 $; Binsr 75 $/mês; EZ Home Inspection 199–299 $/ano.
-- Taxas por relatório em algumas plataformas: 3 a 12 $. Com 20 inspeções por mês, isso acrescenta 60 a 160 $.
+- Spectora ≈ 98 €/mês; HomeGauge ≈ 80 €; Home Inspector Pro 74–≈ 80 €; Inspector Toolbelt ≈ 71 €; Palmtech ≈ 45 €; Binsr ≈ 68 €/mês; EZ Home Inspection 199–≈ 269 €/ano.
+- Taxas por relatório em algumas plataformas: 3 a ≈ 10,8 €. Com 20 inspeções por mês, isso acrescenta 60 a ≈ 144 €.
 
 ## 3. Dor com o tempo
 
@@ -26,11 +28,11 @@ Data: 2026-10-21. Fontes: excertos de pesquisa web (Reddit, fórum InterNACHI, s
 ## 4. Tamanho do mercado (estimativas muito dispersas)
 
 - 10 500 inspetores (RubyHome) até cerca de 40 000 (estimativa citada, considerada otimista). Verdade provável: entre 20 000 e 35 000.
-- Um inspetor com agenda cheia pode faturar mais de 200 000 $/ano, por isso 90 $/mês é um custo pequeno para ele. **Isto quer dizer que a queixa é menos sobre o preço em si e mais sobre sentir-se mal tratado, extras e perda de controlo.**
+- Um inspetor com agenda cheia pode faturar mais de ≈ 180 000 €/ano, por isso ≈ 81 €/mês é um custo pequeno para ele. **Isto quer dizer que a queixa é menos sobre o preço em si e mais sobre sentir-se mal tratado, extras e perda de controlo.**
 
 ## 5. Conta rápida
 
-- 150 clientes a 89 $/mês = ~13 400 $/mês de faturação. É cerca de 0,5 a 1% do mercado.
+- 150 clientes a ≈ 80 €/mês = ~≈ 12 060 €/mês de faturação. É cerca de 0,5 a 1% do mercado.
 - Sem comissão de loja se for web. Custos: alojamento, IA, pagamentos, suporte.
 
 ## 6. Hipóteses de posicionamento (a testar com inspetores)
@@ -64,9 +66,9 @@ Data: 2026-10-21. Fontes: excertos de pesquisa web (Reddit, fórum InterNACHI, s
 # Atualização: o plano mudou
 
 ## A. Preço fixo e IA já estão ocupados (segundo a segunda ronda de pesquisa)
-- InspectorData: 79 $/mês, relatórios ilimitados, sem taxa por relatório nem escalões.
+- InspectorData: ≈ 71 €/mês, relatórios ilimitados, sem taxa por relatório nem escalões.
 - Expert Check e InspectPro: preço fixo mensal e IA (fotos, narrativas automáticas).
-- ISN: plano ilimitado a 99 $/mês, ou 7,25 $ por inspeção. HomeGauge e InspectorPrime: pagamento único.
+- ISN: plano ilimitado a ≈ 89 €/mês, ou ≈ 6,53 € por inspeção. HomeGauge e InspectorPrime: pagamento único.
 - Não verifiquei estes concorrentes diretamente. Reddit e Facebook não foram acessíveis, e é onde estão as queixas mais sinceras.
 
 Conclusão: "mais barato com IA" não faz ninguém mudar. Mudar custa tempo (modelos, histórico, hábitos).
@@ -77,7 +79,7 @@ Conclusão: "mais barato com IA" não faz ninguém mudar. Mudar custa tempo (mod
 |---|---|---|
 | Florida 4-Point e wind mitigation | Já existe uma app dedicada (QuickFill) e vários concorrentes gerais têm modelos (Palmtech, Home Inspector Pro, Inspector Toolbelt, SwiftReporter). No fórum InterNACHI há inspetores a perguntar se usam o software geral ou um gerador de PDF à parte. | Concorrência média. Há um sinal fraco de desconforto com as soluções atuais. |
 | Texas TREC REI 7-6 | Formato único obrigatório desde fev. 2022. Spectora, EZ Home Inspection e Spectacular já têm o modelo, e há biblioteca gratuita. | Comoditizado. Evitar. |
-| Telhados e seguros | EagleView, Hover (cerca de 1 000 $/ano), DroneDeploy (mais de 4 000 $/ano), SkyeBrowse e ferramentas de relatório com IA. | Muito concorrido e exige tecnologia pesada (drones, 3D). Evitar. |
+| Telhados e seguros | EagleView, Hover (cerca de ≈ 900 €/ano), DroneDeploy (mais de ≈ 3 600 €/ano), SkyeBrowse e ferramentas de relatório com IA. | Muito concorrido e exige tecnologia pesada (drones, 3D). Evitar. |
 
 Nenhum é espaço vazio. O mais plausível é a Florida (4-Point e wind mitigation), mas ainda sem prova de uma dor forte.
 
