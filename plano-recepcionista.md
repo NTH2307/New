@@ -74,3 +74,40 @@ Começa no Porto, num setor, à mão (serviço). Só depois vira produto repetí
 
 ## Próximo passo
 Confirmares o setor e o Porto, e eu começo pela lista de 40 empresas e pelo agente de demonstração.
+
+---
+
+# Expansão: Luxemburgo, Suíça e países nórdicos (2026-10-26)
+
+Fontes: páginas de plataformas, blogs de prospeção (Leadfeeder, Switchstack, Ripe Leads), embaixada de Portugal em Berna. **Não são aconselhamento jurídico** e vários blogs vendem serviços de prospeção. Confirmar com um profissional antes de contactar em volume.
+
+## Línguas (voz com IA)
+- As plataformas listam suporte para alemão, francês, italiano, sueco, norueguês, dinamarquês e finlandês. Talkdesk indica voz em francês e alemão **da Suíça**.
+- **Luxemburguês:** só aparece em texto, não em voz. **Alemão suíço (dialeto):** não verifiquei. A qualidade real em línguas pequenas não está confirmada (a única fonte que diz "mesma qualidade" é um blog de um fornecedor).
+
+## Regras de chamada a empresas (resumo dos blogs)
+| País | B2B por chamada | Cuidados |
+|---|---|---|
+| Luxemburgo | Sem lei específica para B2B; não há lista nacional de oposição | Consentimento só para consumidores |
+| Suíça | Permitido | Não ligar para números marcados com asterisco (*) no diretório; a lei suíça (LPD) aplica-se a contactos nomeados |
+| Suécia | Permitido | Números privados contra o registo NIX |
+| Dinamarca | Permitido a empresas | Empresários em nome individual podem contar como particulares (lista Robinson) |
+| Noruega, Finlândia | Em geral permitido a empresas | RGPD aplica-se |
+Contactos por email ou mensagem seguem regras mais duras (consentimento) em vários destes países.
+
+## A pista: a comunidade portuguesa
+- Luxemburgo: mais de 100 mil portugueses, a maior comunidade estrangeira (fonte não verificada, vídeo nas redes).
+- Suíça: a construção civil emprega 31 292 portugueses (19,2% do total da comunidade), segundo a embaixada de Portugal em Berna.
+- Existem pequenas empresas de portugueses nestes países (construção, limpezas, restauração). **Não tenho um número de empresas.**
+- Vantagem: podes vender **em português** a donos portugueses, enquanto o assistente atende os clientes deles em **francês ou alemão**, e o dono recebe os resumos em português.
+
+## O que isto significa
+- **Luxemburgo é o primeiro mercado fora de Portugal:** mesma UE e RGPD, chamadas B2B permitidas, voz em francês (língua forte nas plataformas), grande comunidade portuguesa e rendimentos mais altos.
+- **Suíça em segundo:** fora da UE (lei própria), três línguas, dialeto.
+- **Países nórdicos por último:** sem vantagem de língua ou comunidade, e a qualidade da voz é incerta.
+- **Preços:** a expectativa é cobrar mais do que no Porto, mas é uma hipótese. Perguntar o preço nas primeiras conversas.
+
+## Como testar sem dispersar
+- Portão 1 mantém-se (a voz tem de passar o teste em português **e em francês**).
+- Primeiros 20 contactos: **10 no Porto + 10 em Luxemburgo** (empresas de portugueses), por chamada, para comparar respostas e preços.
+- Só ampliamos para Suíça se o Luxemburgo mostrar resposta e disposição para pagar.
