@@ -1,87 +1,533 @@
 <!doctype html>
 <html lang="pt-PT">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>PataFeliz | Acessórios para cães</title>
-  <meta name="description" content="Comedouros lentos, tapetes de focinho e peitorais para cães. Enviado a partir da Europa.">
-  <link rel="stylesheet" href="styles.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Clínica Exemplo | Lembretes por mensagem</title>
+<meta name="description" content="Demonstração com dados fictícios de um sistema de lembretes de consulta por mensagem.">
+<style>
+  :root {
+    --bg: #f2f4f9;
+    --card: #ffffff;
+    --text: #1c2333;
+    --muted: #5d6679;
+    --line: #dfe3ec;
+    --primary: #3452d1;
+    --primary-dark: #263ea8;
+    --primary-soft: #e6ebfc;
+    --ok: #17724a;
+    --ok-soft: #ddf3e8;
+    --warn: #8a5a00;
+    --warn-soft: #fdf0cf;
+    --free: #5d6679;
+    --free-soft: #eceff4;
+    --banner: #ffd24a;
+    --banner-text: #3a2b00;
+    --banner-h: 40px;
+    --bar-h: 56px;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.45;
+    padding-top: var(--banner-h);
+    -webkit-text-size-adjust: 100%;
+  }
+
+  /* Banner fixo */
+  .banner {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 30;
+    height: var(--banner-h);
+    display: flex; align-items: center; justify-content: center;
+    background: var(--banner); color: var(--banner-text);
+    font-weight: 700; font-size: 14px; letter-spacing: .02em;
+    padding: 0 16px; text-align: center;
+    border-bottom: 1px solid rgba(0,0,0,.12);
+  }
+
+  .intro { max-width: 1100px; margin: 0 auto; padding: 20px 16px 8px; }
+  .intro h1 { margin: 0; font-size: 22px; }
+  .intro p { margin: 4px 0 0; color: var(--muted); font-size: 15px; }
+
+  /* Barra de controlo */
+  .controls {
+    position: sticky; top: var(--banner-h); z-index: 20;
+    background: rgba(242,244,249,.96);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid var(--line);
+  }
+  .controls-inner {
+    max-width: 1100px; margin: 0 auto; min-height: var(--bar-h);
+    padding: 8px 16px; display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  }
+  .scene-count { font-weight: 700; font-size: 15px; min-width: 0; }
+  .scene-count small { display: block; font-weight: 400; color: var(--muted); font-size: 12px; }
+  .btns { display: flex; gap: 8px; flex-shrink: 0; }
+  button {
+    font: inherit; font-weight: 700; font-size: 15px;
+    min-height: 40px; padding: 0 16px; border-radius: 10px; cursor: pointer;
+    border: 1px solid var(--line); background: var(--card); color: var(--text);
+  }
+  button.primary { background: var(--primary); border-color: var(--primary); color: #fff; }
+  button.primary:hover:not(:disabled) { background: var(--primary-dark); }
+  button:disabled { opacity: .45; cursor: not-allowed; }
+  button:focus-visible { outline: 3px solid #1b1b1b; outline-offset: 2px; }
+
+  /* Layout */
+  .layout {
+    max-width: 1100px; margin: 0 auto; padding: 16px;
+    display: grid; grid-template-columns: 1fr; gap: 20px;
+  }
+  @media (min-width: 860px) {
+    .layout { grid-template-columns: 380px minmax(0, 1fr); align-items: start; gap: 28px; padding-top: 24px; }
+    .panel { position: sticky; top: calc(var(--banner-h) + var(--bar-h) + 16px); }
+  }
+  .col-phone, .panel { min-width: 0; }
+
+  .scene-card {
+    background: var(--card); border: 1px solid var(--line); border-radius: 14px;
+    padding: 12px 14px; margin-bottom: 14px; scroll-margin-top: calc(var(--banner-h) + var(--bar-h) + 12px);
+  }
+  .scene-card h2 { margin: 0 0 2px; font-size: 16px; }
+  .scene-card p { margin: 0; color: var(--muted); font-size: 14px; }
+
+  /* Telemóvel */
+  .phone {
+    width: 100%; max-width: 360px; margin: 0 auto;
+    background: #1b2030; border-radius: 38px; padding: 12px;
+    box-shadow: 0 14px 34px rgba(20,30,60,.25);
+  }
+  .screen {
+    background: #f7f8fb; border-radius: 28px; overflow: hidden;
+    height: 700px; display: flex; flex-direction: column; position: relative;
+  }
+  .notch { width: 96px; height: 20px; background: #1b2030; border-radius: 0 0 14px 14px; margin: 0 auto; flex-shrink: 0; }
+  .chat-head {
+    display: flex; align-items: center; gap: 10px;
+    padding: 10px 14px; background: #fff; border-bottom: 1px solid var(--line); flex-shrink: 0;
+  }
+  .avatar {
+    width: 38px; height: 38px; border-radius: 50%; flex-shrink: 0;
+    background: var(--primary-soft); color: var(--primary-dark);
+    display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px;
+  }
+  .who { min-width: 0; }
+  .cname { font-weight: 700; font-size: 16px; line-height: 1.2; overflow-wrap: anywhere; }
+  .pill {
+    display: inline-block; margin-top: 3px; font-size: 11px; font-weight: 700;
+    padding: 2px 8px; border-radius: 999px; background: var(--free-soft); color: var(--free);
+  }
+  .pill.ok { background: var(--ok-soft); color: var(--ok); }
+  .pill.warn { background: var(--warn-soft); color: var(--warn); }
+  .pill.info { background: var(--primary-soft); color: var(--primary-dark); }
+
+  .chat {
+    flex: 1; overflow-y: auto; padding: 12px 12px 16px;
+    display: flex; flex-direction: column; gap: 8px;
+    background: #f1f3f8;
+  }
+  .empty {
+    margin: auto; text-align: center; color: var(--muted); font-size: 14px; padding: 0 24px;
+  }
+  .divider {
+    align-self: center; font-size: 11px; color: var(--muted); background: #e2e6ef;
+    padding: 3px 10px; border-radius: 999px; text-align: center; max-width: 100%;
+  }
+  .msg {
+    max-width: 84%; padding: 8px 10px 5px; border-radius: 14px; font-size: 14.5px;
+    overflow-wrap: anywhere; white-space: pre-line; animation: pop .22s ease-out;
+  }
+  .msg .who-label { display: block; font-size: 11px; font-weight: 700; margin-bottom: 2px; opacity: .85; }
+  .msg time { display: block; text-align: right; font-size: 10.5px; margin-top: 2px; opacity: .75; }
+  .msg.clinic { align-self: flex-end; background: var(--primary); color: #fff; border-bottom-right-radius: 4px; }
+  .msg.patient { align-self: flex-start; background: #fff; border: 1px solid var(--line); border-bottom-left-radius: 4px; }
+  .typing {
+    display: inline-flex; gap: 4px; padding: 11px 14px; border-radius: 14px; animation: pop .2s ease-out;
+  }
+  .typing.clinic { align-self: flex-end; background: var(--primary); }
+  .typing.patient { align-self: flex-start; background: #fff; border: 1px solid var(--line); }
+  .typing i { width: 6px; height: 6px; border-radius: 50%; background: currentColor; opacity: .4; animation: blink 1s infinite; }
+  .typing.clinic i { color: #fff; }
+  .typing.patient i { color: var(--muted); }
+  .typing i:nth-child(2) { animation-delay: .15s; }
+  .typing i:nth-child(3) { animation-delay: .3s; }
+  @keyframes blink { 0%, 80%, 100% { opacity: .25; } 40% { opacity: 1; } }
+  @keyframes pop { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+
+  /* Painel */
+  .panel-card {
+    background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 14px; margin-bottom: 14px;
+    scroll-margin-top: calc(var(--banner-h) + var(--bar-h) + 12px);
+  }
+  .panel-title { margin: 0 0 10px; font-size: 16px; display: flex; justify-content: space-between; gap: 8px; align-items: baseline; flex-wrap: wrap; }
+  .panel-title small { font-weight: 400; color: var(--muted); font-size: 12px; }
+  .kpis { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .kpi { border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px; min-width: 0; background: #fbfcfe; }
+  .kpi .label { font-size: 13px; color: var(--muted); }
+  .kpi .row { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+  .kpi .value { font-size: 32px; font-weight: 800; line-height: 1.15; display: inline-block; }
+  .kpi .delta { font-size: 12px; font-weight: 700; color: var(--ok); background: var(--ok-soft); padding: 1px 8px; border-radius: 999px; }
+  .kpi .delta[hidden] { display: none; }
+  .kpi .value.bump { animation: bump .7s ease-out; }
+  @keyframes bump { 0% { transform: scale(1); color: var(--text); } 35% { transform: scale(1.18); color: var(--primary); } 100% { transform: scale(1); color: var(--text); } }
+  .note { margin: 10px 0 0; font-size: 12px; color: var(--muted); }
+
+  .day { margin: 12px 0 4px; font-size: 12px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
+  .day:first-child { margin-top: 0; }
+  .appt {
+    display: grid; grid-template-columns: 54px minmax(0, 1fr) auto; gap: 10px; align-items: center;
+    padding: 8px 10px; border: 1px solid var(--line); border-radius: 10px; margin-bottom: 6px; background: #fff;
+  }
+  .appt .t { font-weight: 700; font-size: 14px; }
+  .appt .n { font-size: 14px; font-weight: 600; overflow-wrap: anywhere; }
+  .appt .k { font-size: 12px; color: var(--muted); font-weight: 400; }
+  .appt.free { border-style: dashed; background: #f8f9fc; }
+  .appt.free .n { color: var(--muted); font-weight: 400; }
+  .appt.flash { animation: flash 1.6s ease-out; }
+  @keyframes flash { 0% { background: #fff3b8; } 100% { background: #fff; } }
+  .tag { font-size: 11px; font-weight: 700; padding: 3px 9px; border-radius: 999px; white-space: nowrap; }
+  .tag.ok { background: var(--ok-soft); color: var(--ok); }
+  .tag.pending { background: var(--warn-soft); color: var(--warn); }
+  .tag.free { background: var(--free-soft); color: var(--free); }
+  .tag.booked { background: var(--primary-soft); color: var(--primary-dark); }
+
+  .log { list-style: none; margin: 0; padding: 0; }
+  .log li { font-size: 14px; padding: 8px 0; border-top: 1px solid var(--line); overflow-wrap: anywhere; animation: pop .25s ease-out; }
+  .log li:first-child { border-top: 0; }
+  .log .none { color: var(--muted); }
+
+  footer { max-width: 1100px; margin: 0 auto; padding: 4px 16px 32px; color: var(--muted); font-size: 12.5px; }
+
+  @media (max-width: 420px) {
+    .scene-count small { display: none; }
+    button { padding: 0 14px; }
+    .appt { grid-template-columns: 48px minmax(0, 1fr) auto; gap: 8px; padding: 8px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
+  }
+</style>
 </head>
 <body>
-  <div class="topbar">Envio a partir da Europa · Devolução em 14 dias</div>
 
-  <header class="header">
-    <a class="logo" href="#">🐾 PataFeliz</a>
-    <nav>
-      <a href="#produtos">Produtos</a>
-      <a href="#pack">Pack</a>
-      <a href="#faq">Perguntas</a>
-    </nav>
-    <button class="cart-btn" id="cartBtn" aria-label="Abrir carrinho">Carrinho (<span id="cartCount">0</span>)</button>
-  </header>
+<div class="banner" role="note">Demonstração com dados fictícios</div>
 
-  <main>
-    <section class="hero">
-      <div class="hero-text">
-        <h1>Refeições mais calmas. Passeios mais seguros.</h1>
-        <p>Acessórios pensados para o dia a dia do teu cão: comer devagar, brincar com a cabeça e passear com conforto.</p>
-        <a class="btn" href="#produtos">Ver produtos</a>
+<div class="intro">
+  <h1>Clínica Exemplo</h1>
+  <p>Lembretes de consulta por mensagem, do ponto de vista da clínica.</p>
+</div>
+
+<div class="controls">
+  <div class="controls-inner">
+    <div class="scene-count" id="sceneCount">Pronto a começar<small id="sceneName">Clique em Seguinte</small></div>
+    <div class="btns">
+      <button type="button" id="resetBtn">Recomeçar</button>
+      <button type="button" id="nextBtn" class="primary">Seguinte</button>
+    </div>
+  </div>
+</div>
+
+<main class="layout">
+  <section class="col-phone" aria-label="Conversa de demonstração">
+    <div class="scene-card" id="sceneCard">
+      <h2 id="capTitle">Como funciona</h2>
+      <p id="capText">Clique em Seguinte para ver três cenas: o lembrete, a remarcação e a recuperação de pacientes.</p>
+    </div>
+    <div class="phone">
+      <div class="screen">
+        <div class="notch"></div>
+        <div class="chat-head">
+          <div class="avatar" id="avatar">AS</div>
+          <div class="who">
+            <div class="cname" id="cname">Ana Silva</div>
+            <span class="pill" id="statusPill">Paciente fictícia</span>
+          </div>
+        </div>
+        <div class="chat" id="chat" aria-live="polite">
+          <div class="empty" id="empty">A conversa aparece aqui quando clicar em Seguinte.</div>
+        </div>
       </div>
-      <div class="hero-art" aria-hidden="true">🐶</div>
-    </section>
-
-    <section class="benefits">
-      <div><strong>🚚 Envio da Europa</strong><span>Prazo indicado em cada produto</span></div>
-      <div><strong>↩️ 14 dias</strong><span>Para devolveres sem complicações</span></div>
-      <div><strong>💬 Apoio em português</strong><span>Respondemos por email</span></div>
-    </section>
-
-    <section id="produtos" class="section">
-      <h2>Os nossos produtos</h2>
-      <div class="grid" id="productGrid"></div>
-    </section>
-
-    <section id="pack" class="section pack">
-      <h2>Pack Refeição Tranquila</h2>
-      <p>Comedouro lento + tapete de focinho. Ideal para cães que comem depressa ou precisam de gastar energia.</p>
-      <p class="pack-price"><span id="packOld"></span> <strong id="packPrice"></strong></p>
-      <button class="btn" id="packBtn">Adicionar pack ao carrinho</button>
-    </section>
-
-    <section id="faq" class="section">
-      <h2>Perguntas frequentes</h2>
-      <details><summary>Quanto tempo demora a entrega?</summary><p>O prazo aparece em cada produto e depende do armazém do fornecedor. Recebes o código de seguimento por email assim que a encomenda for expedida.</p></details>
-      <details><summary>Posso devolver?</summary><p>Sim. Tens 14 dias após a receção para desistir da compra. Vê os detalhes na <a href="politicas.html#devolucoes">política de devoluções</a>.</p></details>
-      <details><summary>Como escolho o tamanho do peitoral?</summary><p>Mede o perímetro do peito do teu cão, no ponto mais largo, e compara com a tabela de tamanhos na página do produto.</p></details>
-      <details><summary>Estes produtos substituem o veterinário?</summary><p>Não. São acessórios de conforto e rotina. Se o teu cão tem problemas de saúde ou de comportamento, fala com o veterinário.</p></details>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div>
-      <strong>🐾 PataFeliz</strong>
-      <p>Acessórios para cães.</p>
     </div>
-    <div>
-      <a href="politicas.html#envios">Envios</a>
-      <a href="politicas.html#devolucoes">Devoluções</a>
-      <a href="politicas.html#privacidade">Privacidade</a>
-      <a href="politicas.html#termos">Termos</a>
-    </div>
-    <small>© <span id="year"></span> PataFeliz. Todos os direitos reservados.</small>
-  </footer>
+  </section>
 
-  <aside class="drawer" id="drawer" aria-hidden="true">
-    <div class="drawer-head"><h3>O teu carrinho</h3><button id="closeCart" aria-label="Fechar">✕</button></div>
-    <div id="cartItems"></div>
-    <div class="drawer-foot">
-      <p>Total: <strong id="cartTotal">0,00 €</strong></p>
-      <button class="btn" id="checkoutBtn">Finalizar compra</button>
-      <small id="checkoutNote"></small>
+  <section class="panel" aria-label="Painel da clínica" id="panel">
+    <div class="panel-card">
+      <h2 class="panel-title">Painel da clínica <small>este mês, valores fictícios</small></h2>
+      <div class="kpis">
+        <div class="kpi"><div class="label">Consultas confirmadas</div><div class="row"><span class="value" id="v-confirmed">38</span><span class="delta" id="d-confirmed" hidden>+1</span></div></div>
+        <div class="kpi"><div class="label">Remarcações feitas</div><div class="row"><span class="value" id="v-resched">6</span><span class="delta" id="d-resched" hidden>+1</span></div></div>
+        <div class="kpi"><div class="label">Pacientes recuperados</div><div class="row"><span class="value" id="v-recovered">4</span><span class="delta" id="d-recovered" hidden>+1</span></div></div>
+        <div class="kpi"><div class="label">Faltas evitadas</div><div class="row"><span class="value" id="v-avoided">5</span><span class="delta" id="d-avoided" hidden>+1</span></div></div>
+      </div>
+      <p class="note">Faltas evitadas é uma estimativa: consultas que seriam falhadas sem o lembrete.</p>
     </div>
-  </aside>
-  <div class="overlay" id="overlay"></div>
 
-  <script src="app.js"></script>
+    <div class="panel-card">
+      <h2 class="panel-title">Agenda <small>extrato da semana</small></h2>
+      <div id="agenda"></div>
+    </div>
+
+    <div class="panel-card">
+      <h2 class="panel-title">Atividade recente</h2>
+      <ul class="log" id="log"><li class="none">Ainda sem atividade.</li></ul>
+    </div>
+  </section>
+</main>
+
+<footer>
+  Clínica Exemplo, nomes de pacientes, datas, horas e números são todos inventados. Qualquer semelhança com clínicas ou pessoas reais é coincidência.
+</footer>
+
+<script>
+(function () {
+  'use strict';
+
+  var $ = function (s) { return document.querySelector(s); };
+  var chat = $('#chat'), nextBtn = $('#nextBtn'), resetBtn = $('#resetBtn');
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var speed = reduced ? 0.15 : 1;
+
+  var DAYS = { 12: 'Quinta, 12 nov.', 13: 'Sexta, 13 nov.', 17: 'Terça, 17 nov.' };
+  var STATUS = { ok: 'Confirmada', pending: 'Por confirmar', free: 'Livre', booked: 'Marcada' };
+
+  var state, token = 0, current = 0, busy = false;
+
+  function freshState() {
+    return {
+      kpi: { confirmed: 38, resched: 6, recovered: 4, avoided: 5 },
+      agenda: [
+        { id: 'carlos', d: 12, t: '09h00', n: 'Carlos Matos', k: 'Limpeza', s: 'ok' },
+        { id: 'ana', d: 12, t: '10h30', n: 'Ana Silva', k: 'Consulta', s: 'pending' },
+        { id: 'rui', d: 12, t: '11h30', n: 'Rui Costa', k: 'Consulta', s: 'pending' },
+        { id: 'ines', d: 12, t: '14h30', n: 'Inês Pires', k: 'Destartarização', s: 'ok' },
+        { id: 'sofia', d: 13, t: '10h00', n: 'Sofia Duarte', k: 'Limpeza', s: 'ok' },
+        { id: 'tiago', d: 17, t: '10h00', n: 'Tiago Nunes', k: 'Consulta', s: 'ok' }
+      ],
+      log: [],
+      flash: null
+    };
+  }
+
+  /* Painel */
+  function renderAgenda() {
+    var rows = state.agenda.slice().sort(function (a, b) { return a.d - b.d || (a.t < b.t ? -1 : 1); });
+    var html = '', lastDay = null;
+    rows.forEach(function (r) {
+      if (r.d !== lastDay) { html += '<div class="day">' + DAYS[r.d] + '</div>'; lastDay = r.d; }
+      html += '<div class="appt ' + (r.s === 'free' ? 'free ' : '') + (state.flash === r.id ? 'flash' : '') + '">' +
+        '<span class="t">' + r.t + '</span>' +
+        '<span class="n">' + r.n + (r.k ? ' <span class="k">' + r.k + '</span>' : '') + '</span>' +
+        '<span class="tag ' + r.s + '">' + STATUS[r.s] + '</span></div>';
+    });
+    $('#agenda').innerHTML = html;
+  }
+  function renderLog() {
+    $('#log').innerHTML = state.log.length
+      ? state.log.map(function (l) { return '<li>' + l + '</li>'; }).join('')
+      : '<li class="none">Ainda sem atividade.</li>';
+  }
+  function renderKpis() {
+    ['confirmed', 'resched', 'recovered', 'avoided'].forEach(function (k) {
+      $('#v-' + k).textContent = state.kpi[k];
+      $('#d-' + k).hidden = true;
+    });
+  }
+  function bump(k, by) {
+    state.kpi[k] += by;
+    var v = $('#v-' + k), d = $('#d-' + k);
+    v.textContent = state.kpi[k];
+    d.textContent = '+' + by;
+    d.hidden = false;
+    v.classList.remove('bump'); void v.offsetWidth; v.classList.add('bump');
+  }
+  function clearDeltas() {
+    ['confirmed', 'resched', 'recovered', 'avoided'].forEach(function (k) { $('#d-' + k).hidden = true; });
+    state.flash = null;
+  }
+  function row(id) { return state.agenda.filter(function (r) { return r.id === id; })[0]; }
+  function addLog(text) { state.log.unshift(text); renderLog(); }
+
+  /* Cenas */
+  var scenes = [
+    {
+      name: 'Lembrete',
+      title: 'Cena 1: lembrete 48 horas antes',
+      text: 'A clínica envia o lembrete automaticamente. A paciente responde 1 e a consulta fica confirmada.',
+      done: 'A consulta da Ana ficou confirmada, sem qualquer telefonema da receção.',
+      contact: { name: 'Ana Silva', ini: 'AS', status: 'Por confirmar', tone: 'warn' },
+      steps: [
+        { k: 'divider', text: 'Terça, 10 nov. · 48 horas antes da consulta' },
+        { k: 'msg', from: 'clinic', time: '10:30', text: 'Olá Ana, lembramos a sua consulta de dia 12 de novembro às 10h30. Responda 1 para confirmar ou 2 para remarcar.' },
+        { k: 'msg', from: 'patient', time: '10:42', text: '1' },
+        { k: 'status', text: 'Confirmada', tone: 'ok' },
+        { k: 'panel', fn: function () {
+            row('ana').s = 'ok'; state.flash = 'ana'; renderAgenda();
+            bump('confirmed', 1);
+            addLog('Ana Silva confirmou a consulta de dia 12 às 10h30.');
+        } },
+        { k: 'msg', from: 'clinic', time: '10:42', text: 'Obrigado, Ana! A sua consulta está confirmada. Até dia 12.' }
+      ]
+    },
+    {
+      name: 'Remarcação',
+      title: 'Cena 2: remarcação',
+      text: 'O Rui não pode ir. Responde 2, o sistema propõe três horários livres e ele escolhe um. A agenda atualiza sozinha.',
+      done: 'O horário de quinta ficou livre para outro paciente e o Rui não faltou.',
+      contact: { name: 'Rui Costa', ini: 'RC', status: 'Por confirmar', tone: 'warn' },
+      steps: [
+        { k: 'divider', text: 'Terça, 10 nov. · 48 horas antes da consulta' },
+        { k: 'msg', from: 'clinic', time: '11:00', text: 'Olá Rui, lembramos a sua consulta de dia 12 de novembro às 11h30. Responda 1 para confirmar ou 2 para remarcar.' },
+        { k: 'msg', from: 'patient', time: '11:06', text: '2' },
+        { k: 'status', text: 'A remarcar', tone: 'info' },
+        { k: 'msg', from: 'clinic', time: '11:06', text: 'Sem problema, Rui. Estes horários estão livres:\n1. Sexta, dia 13, às 09h00\n2. Sexta, dia 13, às 15h30\n3. Segunda, dia 16, às 11h00\nResponda 1, 2 ou 3.' },
+        { k: 'msg', from: 'patient', time: '11:08', text: '2' },
+        { k: 'status', text: 'Remarcada', tone: 'ok' },
+        { k: 'panel', fn: function () {
+            var r = row('rui'); r.s = 'free'; r.n = 'Horário livre'; r.k = '';
+            state.agenda.push({ id: 'rui2', d: 13, t: '15h30', n: 'Rui Costa', k: 'Consulta', s: 'ok' });
+            state.flash = 'rui2'; renderAgenda();
+            bump('resched', 1); bump('confirmed', 1); bump('avoided', 1);
+            addLog('Rui Costa remarcou para sexta, dia 13 às 15h30. O horário de quinta ficou livre.');
+        } },
+        { k: 'msg', from: 'clinic', time: '11:08', text: 'Remarcado! A sua nova consulta é na sexta, dia 13 de novembro, às 15h30. Até lá!' }
+      ]
+    },
+    {
+      name: 'Recuperação',
+      title: 'Cena 3: recuperação de pacientes',
+      text: 'A Marta não vem há 8 meses. A clínica convida-a a marcar uma revisão e ela aceita.',
+      done: 'Uma paciente que tinha deixado de vir tem outra vez consulta marcada.',
+      contact: { name: 'Marta Lopes', ini: 'ML', status: 'Inativa há 8 meses', tone: 'warn' },
+      steps: [
+        { k: 'divider', text: 'Quarta, 11 nov. · campanha de revisão' },
+        { k: 'msg', from: 'clinic', time: '15:00', text: 'Olá Marta, já passaram 8 meses desde a sua última visita à Clínica Exemplo. Que tal marcarmos uma consulta de revisão? Temos terça, dia 17, às 17h00. Quer que reservemos?' },
+        { k: 'msg', from: 'patient', time: '15:21', text: 'Sim, por favor!' },
+        { k: 'status', text: 'Consulta marcada', tone: 'ok' },
+        { k: 'panel', fn: function () {
+            state.agenda.push({ id: 'marta', d: 17, t: '17h00', n: 'Marta Lopes', k: 'Revisão', s: 'booked' });
+            state.flash = 'marta'; renderAgenda();
+            bump('recovered', 1);
+            addLog('Marta Lopes aceitou a revisão de dia 17 às 17h00. Paciente recuperada.');
+        } },
+        { k: 'msg', from: 'clinic', time: '15:21', text: 'Reservado, Marta! Terça, dia 17 de novembro, às 17h00. Enviamos um lembrete 48 horas antes.' }
+      ]
+    }
+  ];
+
+  /* Chat */
+  function setContact(c) {
+    $('#cname').textContent = c.name;
+    $('#avatar').textContent = c.ini;
+    setStatus(c.status, c.tone);
+  }
+  function setStatus(text, tone) {
+    var p = $('#statusPill');
+    p.textContent = text;
+    p.className = 'pill' + (tone ? ' ' + tone : '');
+  }
+  function scrollChat() { chat.scrollTop = chat.scrollHeight; }
+  function clearEmpty() { var e = $('#empty'); if (e) e.remove(); }
+  function addDivider(text) {
+    clearEmpty();
+    var d = document.createElement('div'); d.className = 'divider'; d.textContent = text;
+    chat.appendChild(d); scrollChat();
+  }
+  function addTyping(from) {
+    clearEmpty();
+    var t = document.createElement('div'); t.className = 'typing ' + from;
+    t.innerHTML = '<i></i><i></i><i></i>';
+    chat.appendChild(t); scrollChat();
+    return t;
+  }
+  function addMsg(from, text, time) {
+    clearEmpty();
+    var m = document.createElement('div'); m.className = 'msg ' + from;
+    if (from === 'clinic') {
+      var l = document.createElement('span'); l.className = 'who-label'; l.textContent = 'Clínica Exemplo';
+      m.appendChild(l);
+    }
+    m.appendChild(document.createTextNode(text));
+    var tm = document.createElement('time'); tm.textContent = time;
+    m.appendChild(tm);
+    chat.appendChild(m); scrollChat();
+  }
+
+  function wait(ms, tok) {
+    return new Promise(function (res) { setTimeout(function () { res(tok === token); }, ms * speed); });
+  }
+  function isNarrow() { return window.matchMedia('(max-width: 859px)').matches; }
+  function goTo(sel) {
+    if (isNarrow()) { $(sel).scrollIntoView({ behavior: reduced ? 'auto' : 'smooth', block: 'start' }); }
+  }
+
+  function updateControls() {
+    nextBtn.disabled = busy || current >= scenes.length;
+    nextBtn.textContent = 'Seguinte';
+    resetBtn.disabled = false;
+  }
+
+  async function play(i) {
+    var tok = ++token, sc = scenes[i];
+    busy = true; updateControls();
+    clearDeltas();
+    chat.innerHTML = '';
+    setContact(sc.contact);
+    $('#sceneCount').firstChild.nodeValue = 'Cena ' + (i + 1) + ' de ' + scenes.length;
+    $('#sceneName').textContent = sc.name;
+    $('#capTitle').textContent = sc.title;
+    $('#capText').textContent = sc.text;
+    goTo('#sceneCard');
+
+    for (var s = 0; s < sc.steps.length; s++) {
+      var st = sc.steps[s];
+      if (st.k === 'divider') {
+        addDivider(st.text);
+        if (!(await wait(500, tok))) return;
+      } else if (st.k === 'msg') {
+        var ty = addTyping(st.from);
+        if (!(await wait(st.from === 'clinic' ? 800 : 1000, tok))) return;
+        ty.remove();
+        addMsg(st.from, st.text, st.time);
+        if (!(await wait(700, tok))) return;
+      } else if (st.k === 'status') {
+        setStatus(st.text, st.tone);
+        if (!(await wait(500, tok))) return;
+      } else if (st.k === 'panel') {
+        st.fn();
+        if (!(await wait(900, tok))) return;
+      }
+    }
+    $('#capText').textContent = sc.done;
+    current = i + 1; busy = false; updateControls();
+    if (current >= scenes.length) { $('#sceneName').textContent = 'Fim. Clique em Recomeçar'; }
+    if (!(await wait(500, tok))) return;
+    goTo('#panel');
+  }
+
+  function reset() {
+    token++; busy = false; current = 0;
+    state = freshState();
+    chat.innerHTML = '<div class="empty" id="empty">A conversa aparece aqui quando clicar em Seguinte.</div>';
+    setContact({ name: 'Ana Silva', ini: 'AS', status: 'Paciente fictícia', tone: '' });
+    $('#sceneCount').firstChild.nodeValue = 'Pronto a começar';
+    $('#sceneName').textContent = 'Clique em Seguinte';
+    $('#capTitle').textContent = 'Como funciona';
+    $('#capText').textContent = 'Clique em Seguinte para ver três cenas: o lembrete, a remarcação e a recuperação de pacientes.';
+    renderKpis(); renderAgenda(); renderLog(); updateControls();
+    window.scrollTo({ top: 0, behavior: reduced ? 'auto' : 'smooth' });
+  }
+
+  nextBtn.addEventListener('click', function () { if (!busy && current < scenes.length) { play(current); } });
+  resetBtn.addEventListener('click', reset);
+
+  reset();
+  window.scrollTo(0, 0);
+})();
+</script>
 </body>
 </html>
